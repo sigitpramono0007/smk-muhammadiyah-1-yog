@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daftar — SMK Muhammadiyah 1 Yogyakarta</title>
+  <meta name="description" content="Formulir pendaftaran siswa baru SMK Muhammadiyah 1 Yogyakarta.">
+  <link rel="icon" href="images/logo-smk.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="SMK Muhammadiyah 1 Yogyakarta — Beranda">
+      <img src="images/logo-smk.png" alt="Logo SMK Muhammadiyah 1 Yogyakarta" width="48" height="48">
+      <span>SMK Muhammadiyah 1 Yogyakarta</span>
+    </a>
+    <button class="nav-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="main-nav"><span></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Navigasi utama">
+      <ul>
+        <li><a href="index.html#beranda">Beranda</a></li>
+        <li><a href="index.html#profil">Profil</a></li>
+        <li><a href="index.html#program-keahlian">Program Keahlian</a></li>
+        <li><a href="index.html#berita">Berita</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li class="nav-cta"><a href="daftar.html" class="btn btn-yellow nav-btn">Daftar</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="page-title">
+  <div class="container">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Beranda</a><span>/</span><b>Pendaftaran</b></nav>
+    <h1>Pendaftaran Siswa Baru</h1>
+    <p>Isi formulir berikut dengan data yang benar. Tim kami akan menghubungi Anda untuk langkah selanjutnya.</p>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <div class="form-card form-wide fade-in">
+      <h2>Formulir Pendaftaran</h2>
+      <p class="form-note">Kolom bertanda <span class="req">*</span> wajib diisi.</p>
+      <form id="daftar-form" novalidate>
+        <h3 class="form-section">Data Calon Siswa</h3>
+        <div class="form-grid">
+          <div class="field">
+            <label for="nama">Nama Lengkap <span class="req">*</span></label>
+            <input type="text" id="nama" name="nama" placeholder="Sesuai ijazah/akta kelahiran" required autocomplete="name">
+            <span class="error">Nama lengkap wajib diisi.</span>
+          </div>
+          <div class="field">
+            <label for="nisn">NISN <span class="req">*</span></label>
+            <input type="text" id="nisn" name="nisn" placeholder="10 digit angka" required inputmode="numeric" data-pattern="^\d{10}$">
+            <span class="error">NISN harus 10 digit angka.</span>
+          </div>
+          <div class="field">
+            <label for="tempat">Tempat Lahir <span class="req">*</span></label>
+            <input type="text" id="tempat" name="tempat" placeholder="Contoh: Yogyakarta" required >
+            <span class="error">Tempat lahir wajib diisi.</span>
+          </div>
+          <div class="field">
+            <label for="tgl">Tanggal Lahir <span class="req">*</span></label>
+            <input type="date" id="tgl" name="tgl" placeholder="" required >
+            <span class="error">Tanggal lahir wajib diisi.</span>
+          </div>
+          <div class="field" data-radio="gender">
+            <label>Jenis Kelamin <span class="req">*</span></label>
+            <div class="radio-group">
+              <label class="radio"><input type="radio" name="gender" value="Laki-laki"> Laki-laki</label>
+              <label class="radio"><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+            </div>
+            <span class="error">Pilih jenis kelamin.</span>
+          </div>
+          <div class="field">
+            <label for="asal">Asal Sekolah (SMP/MTs) <span class="req">*</span></label>
+            <input type="text" id="asal" name="asal" placeholder="Nama sekolah asal" required >
+            <span class="error">Asal sekolah wajib diisi.</span>
+          </div>
+          <div class="field">
+            <label for="lulus">Tahun Lulus <span class="req">*</span></label>
+            <input type="text" id="lulus" name="lulus" placeholder="Contoh: 2026" required inputmode="numeric" data-pattern="^(19|20)\d{2}$">
+            <span class="error">Masukkan tahun 4 digit.</span>
+          </div>
+          <div class="field full">
+            <label for="alamat">Alamat Lengkap <span class="req">*</span></label>
+            <textarea id="alamat" name="alamat" placeholder="Jalan, RT/RW, kelurahan, kecamatan, kota" required></textarea>
+            <span class="error">Alamat wajib diisi.</span>
+          </div>
+        </div>
+
+        <h3 class="form-section">Kontak</h3>
+        <div class="form-grid">
+          <div class="field">
+            <label for="hp">No. HP / WhatsApp <span class="req">*</span></label>
+            <input type="tel" id="hp" name="hp" placeholder="08xxxxxxxxxx" required inputmode="tel" data-pattern="^(\+62|62|0)\d{8,13}$">
+            <span class="error">Masukkan nomor HP yang valid (9-14 digit).</span>
+          </div>
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="nama@email.com" required autocomplete="email">
+            <span class="error">Masukkan alamat email yang valid.</span>
+          </div>
+        </div>
+
+        <h3 class="form-section">Data Orang Tua / Wali</h3>
+        <div class="form-grid">
+          <div class="field">
+            <label for="ortu">Nama Orang Tua / Wali <span class="req">*</span></label>
+            <input type="text" id="ortu" name="ortu" placeholder="Nama lengkap" required >
+            <span class="error">Nama orang tua/wali wajib diisi.</span>
+          </div>
+          <div class="field">
+            <label for="hportu">No. HP Orang Tua / Wali <span class="req">*</span></label>
+            <input type="tel" id="hportu" name="hportu" placeholder="08xxxxxxxxxx" required inputmode="tel" data-pattern="^(\+62|62|0)\d{8,13}$">
+            <span class="error">Masukkan nomor HP yang valid (9-14 digit).</span>
+          </div>
+        </div>
+
+        <h3 class="form-section">Pilihan Program Keahlian</h3>
+        <div class="form-grid">
+          <div class="field">
+            <label for="pilihan1">Pilihan Pertama <span class="req">*</span></label>
+            <select id="pilihan1" name="pilihan1" required>
+              <option value="">-- Pilih program --</option>
+              <option value="Rekayasa Perangkat Lunak (RPL)">Rekayasa Perangkat Lunak (RPL)</option><option value="Teknik Komputer dan Jaringan (TKJ)">Teknik Komputer dan Jaringan (TKJ)</option><option value="Desain Komunikasi Visual (DKV)">Desain Komunikasi Visual (DKV)</option><option value="Animasi">Animasi</option><option value="Akuntansi dan Keuangan Lembaga">Akuntansi dan Keuangan Lembaga</option><option value="Produksi dan Siaran Program Televisi">Produksi dan Siaran Program Televisi</option>
+            </select>
+            <span class="error">Pilih program keahlian.</span>
+          </div>
+          <div class="field">
+            <label for="pilihan2">Pilihan Kedua</label>
+            <select id="pilihan2" name="pilihan2">
+              <option value="">-- Tidak ada --</option>
+              <option value="Rekayasa Perangkat Lunak (RPL)">Rekayasa Perangkat Lunak (RPL)</option><option value="Teknik Komputer dan Jaringan (TKJ)">Teknik Komputer dan Jaringan (TKJ)</option><option value="Desain Komunikasi Visual (DKV)">Desain Komunikasi Visual (DKV)</option><option value="Animasi">Animasi</option><option value="Akuntansi dan Keuangan Lembaga">Akuntansi dan Keuangan Lembaga</option><option value="Produksi dan Siaran Program Televisi">Produksi dan Siaran Program Televisi</option>
+            </select>
+            <span class="error">Pilihan kedua tidak boleh sama dengan pilihan pertama.</span>
+          </div>
+        </div>
+
+        <div class="field" data-check="setuju" style="margin-top:24px">
+          <label class="radio"><input type="checkbox" name="setuju"> Saya menyatakan bahwa data yang saya isi adalah benar.</label>
+          <span class="error">Anda harus menyetujui pernyataan ini.</span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Kirim Pendaftaran</button>
+        <div class="form-status" id="daftar-status" role="status"></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-name">SMK Muhammadiyah 1 Yogyakarta</p>
+    <p class="footer-info">Jl. Nitikan No. 48, Umbulharjo, Kota Yogyakarta, DIY<span class="sep">|</span><a href="tel:(0274)0000000">(0274) 000-0000</a><span class="sep">|</span><a href="mailto:info@smkmuh1yk.sch.id">info@smkmuh1yk.sch.id</a></p>
+    <p class="footer-copy">&copy; <span class="js-year">2026</span> SMK Muhammadiyah 1 Yogyakarta. Hak cipta dilindungi.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

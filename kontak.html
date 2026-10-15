@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontak — SMK Muhammadiyah 1 Yogyakarta</title>
+  <meta name="description" content="Alamat, telepon, email, dan peta lokasi SMK Muhammadiyah 1 Yogyakarta.">
+  <link rel="icon" href="images/logo-smk.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="SMK Muhammadiyah 1 Yogyakarta — Beranda">
+      <img src="images/logo-smk.png" alt="Logo SMK Muhammadiyah 1 Yogyakarta" width="48" height="48">
+      <span>SMK Muhammadiyah 1 Yogyakarta</span>
+    </a>
+    <button class="nav-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="main-nav"><span></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Navigasi utama">
+      <ul>
+        <li><a href="index.html#beranda">Beranda</a></li>
+        <li><a href="index.html#profil">Profil</a></li>
+        <li><a href="index.html#program-keahlian">Program Keahlian</a></li>
+        <li><a href="index.html#berita">Berita</a></li>
+        <li><a href="kontak.html" class="active" aria-current="page">Kontak</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li class="nav-cta"><a href="daftar.html" class="btn btn-yellow nav-btn">Daftar</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="page-title">
+  <div class="container">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Beranda</a><span>/</span><b>Kontak</b></nav>
+    <h1>Kontak Kami</h1>
+    <p>Ada pertanyaan seputar pendaftaran atau informasi sekolah? Hubungi kami.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <ul class="info-list fade-in">
+        <li class="info-item"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><h3>Alamat</h3><p>Jl. Nitikan No. 48, Umbulharjo, Kota Yogyakarta, DIY</p></div></li>
+        <li class="info-item"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><div><h3>Telepon</h3><p><a href="tel:(0274)0000000">(0274) 000-0000</a></p></div></li>
+        <li class="info-item"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><div><h3>Email</h3><p><a href="mailto:info@smkmuh1yk.sch.id">info@smkmuh1yk.sch.id</a></p></div></li>
+        <li class="info-item"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><div><h3>Jam Layanan</h3><p>Senin – Jumat, 07.00 – 15.00 WIB</p></div></li>
+      </ul>
+      <div class="form-card fade-in">
+        <h2>Kirim Pesan</h2>
+        <form id="contact-form" novalidate>
+          <div class="field">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" placeholder="Nama lengkap" autocomplete="name">
+            <span class="error">Nama wajib diisi.</span>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="nama@email.com" autocomplete="email">
+            <span class="error">Masukkan alamat email yang valid.</span>
+          </div>
+          <div class="field">
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" name="pesan" placeholder="Tulis pesan Anda di sini..."></textarea>
+            <span class="error">Pesan wajib diisi.</span>
+          </div>
+          <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+          <div class="form-status" id="form-status" role="status"></div>
+        </form>
+      </div>
+    </div>
+    <div class="map-wrap fade-in">
+      <iframe title="Lokasi SMK Muhammadiyah 1 Yogyakarta di Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=-7.8198293,110.3824197&amp;z=17&amp;hl=id&amp;output=embed" allowfullscreen></iframe>
+      <a class="map-link" href="https://maps.app.goo.gl/cScgFQJm5wEiCftt5" target="_blank" rel="noopener">Buka di Google Maps &rarr;</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-name">SMK Muhammadiyah 1 Yogyakarta</p>
+    <p class="footer-info">Jl. Nitikan No. 48, Umbulharjo, Kota Yogyakarta, DIY<span class="sep">|</span><a href="tel:(0274)0000000">(0274) 000-0000</a><span class="sep">|</span><a href="mailto:info@smkmuh1yk.sch.id">info@smkmuh1yk.sch.id</a></p>
+    <p class="footer-copy">&copy; <span class="js-year">2026</span> SMK Muhammadiyah 1 Yogyakarta. Hak cipta dilindungi.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
